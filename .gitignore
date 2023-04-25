@@ -1,0 +1,17 @@
+.vscode/
+
+#server
+server/.env
+server/node_modules/
+
+#client
+client/node_modules/
+client/.angular/
+client/src/assets/fonts/.DS_Store
+client/src/assets/images/Thumbs.db
+client/src/assets/images/blog/Thumbs.db
+client/src/assets/images/portfolio/Thumbs.db
+client/src/assets/images/portfolio/minislide/Thumbs.db
+client/.env
+
+.DS_Store

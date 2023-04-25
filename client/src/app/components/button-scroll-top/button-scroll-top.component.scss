@@ -1,0 +1,25 @@
+.btn-move-top{
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 0;
+    background: #171d21;
+    position: fixed;
+    display: none;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    -webkit-animation: slide-in-fwd-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-fwd-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    &.show-bt-top{
+        display:block;
+        z-index: 9997;
+    }
+
+    svg{
+        margin-top: -4px;
+    }
+}

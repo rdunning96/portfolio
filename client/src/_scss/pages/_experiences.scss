@@ -1,0 +1,103 @@
+
+
+app-experiences {
+
+    .container {
+        padding: 50px 0;
+
+        @include media-breakpoint-up(lg) { 
+            padding: 100px 0;
+        }
+
+        .box-content {
+            display: flex;
+            flex-wrap: wrap;
+        
+            .col-md-6 {
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                margin-bottom: 20px;
+
+                @include media-breakpoint-up(md) { 
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .experiences {
+        padding: 100px 15px 0 15px;
+    }
+
+    .list-experiences {
+        padding: 0 15px;
+        
+        h2 {
+            margin: 20px 10px 30px 0;
+
+            i{
+                margin-right: 10px;
+                color: #8e908f;
+                font-size: 16px;
+            }
+
+            span.data {
+                font-family: 'Open sans',sans-serif;
+                font-weight: 400;
+                float: right;
+                font-style: italic;
+            }
+        } 
+    }
+
+    .box-text p.slogan {
+        text-align: center;
+        font-family: 'Tangerine',sans-serif;
+        font-weight: 400;
+        font-size: 34px;
+        color: #212121;
+        margin-top: 40px;
+
+        .fa-quote-left {
+            margin-right: 15px;
+        }
+
+        .fa-quote-right {
+            margin-left: 15px;
+        }
+
+        i{
+            font-size: 25px;
+            color: #ddd;
+        }
+    }
+
+    .signature {
+        float: right;
+        margin-top: 30px;
+    }
+
+
+    /*Skills*/
+
+    .skills-box {
+
+        .meter {
+            height: 6px;
+            border: 1px solid #434343;
+            padding: 1px;
+            margin-bottom: 15px;
+
+            p {
+                height: 2px;
+                background: #252525;
+            }
+        }
+    }
+
+    .skills-box .skills-progress > p span {
+        float: right;
+        color: #434343;
+    }
+}

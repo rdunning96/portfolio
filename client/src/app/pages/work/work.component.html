@@ -1,0 +1,66 @@
+<!--SECTION WORK-->
+
+<section id="workPage" class="page-effect">
+    <div class="container">
+      <div class="row">
+        <div class="box-content">
+            <h1> WORK </h1>
+
+            <!-- Category Filter -->
+                <dl class="group">
+                   <dt></dt>
+                    <dd>
+                        <ul class="filter group albumFilter"> 
+                            <li class="cl-effect-11 current"><a data-hover="SHOWALL" (click)="filterItems('all');" class="active" href="javascript:void(0)">SHOWALL</a></li> 
+                            <li class="cl-effect-11"><a data-hover="MARKETING" (click)="filterItems('marketing')" href="javascript:void(0)">MARKETING</a></li> 
+                            <li class="cl-effect-11"><a data-hover="BRANDING" (click)="filterItems('branding')" href="javascript:void(0)">BRANDING</a></li> 
+                            <li class="cl-effect-11"><a data-hover="DESIGN" (click)="filterItems('design')" href="javascript:void(0)">DESIGN</a></li> 
+                            <li class="cl-effect-11"><a data-hover="PHOTOGRAPHY" (click)="filterItems('photo')" href="javascript:void(0)">PHOTOGRAPHY</a></li> 
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="portfolio albumContainer activegrid">
+                    <ul id="product" class="nav-pills nav-stacked rectangle-list" *ngIf="worksItems.length != 0; else noResults">
+                        <li class="col-md-4 gallery-animation item grid" *ngFor="let product of worksItems" (click)="navigateTo()">
+                            <figure class="effect-oscar">
+                                <a><img src="{{product.src}}" alt="" /></a>                              
+                                <figcaption>
+                                        <p>{{product.description}}</p>
+                                </figcaption>	
+                            </figure>
+                        </li> 
+                    </ul>
+                    <ng-template #noResults>
+                        <p>No results found".</p>
+                    </ng-template>
+                </div>
+         </div><!--close box content-->
+      </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="overlay-white">
+        <div class="container">
+          <div class="row">
+           <div class="col-md-12">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let card of items; let i = index">
+                    <ng-template carouselSlide>
+                        <div class="item">
+                            <div class="carousel-desc">
+                                <span class=" icon-anchor"></span>
+                                <h1>{{card.title}}</h1>
+                                <p>{{card.description}}</p>
+                                <p class="nm-name">- {{card.author}}</p>
+                             </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+          </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</section>
+

@@ -1,0 +1,214 @@
+
+app-contact {
+    
+    #section4 {
+        padding: 50px 0;
+
+        @include media-breakpoint-up(lg) { 
+            padding: 100px 0;
+        }
+    }
+
+    .contact {
+        padding: 0 0 100px 0;
+    }
+
+    .box-contact-data {
+        display: block;
+
+        @include media-breakpoint-up(md) { 
+            display: flex;
+        }
+
+        .c-info {
+            text-align: lest;
+            margin: 10px 0 30px 0;
+            font-family: 'Open sans',sans-serif;
+            font-weight: 300;
+
+            @include media-breakpoint-up(md) { 
+                text-align: center;
+                margin: 10px 0 80px 0;
+            }
+
+            i{
+                color: #212121;
+                background: #fff;
+                border:1px solid #212121;
+                padding: 10px;
+                margin-right: 10px;
+
+                &.fa-phone{
+                    padding: 10px 11px;
+                }
+
+                &.fa-map-marker{
+                    padding: 10px 13px;
+                }
+            }
+        }
+
+    }
+
+    #contact_form {
+        display: block;
+
+        @include media-breakpoint-up(md) { 
+            display: flex;
+        }
+
+        .data-message{
+            margin-bottom: 20px;
+
+            @include media-breakpoint-up(md) { 
+                margin-bottom: 0;
+            }
+        }
+
+        .data-message, .message-content {
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        #name,#email,#subject {
+            width: 100%;
+            background: #fff;
+        }
+
+        #email,#name {
+            margin-top: 20px;
+        }
+
+        #message {
+            height: 178px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0, .2);
+            letter-spacing: 1px;
+        }
+
+        .input-contact {
+            display: block;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: 13px;
+            color: #333;
+            background: #fff;
+        }
+    }
+
+
+    .form input {
+        letter-spacing: 1px;
+        color: #777;
+        border: 1px solid rgba(0,0,0, .2);
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .form textarea:hover{
+        border-color: rgba(0,0,0, .2)!important;
+        outline: none !important;
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus{
+        color: #111;
+        outline: none !important;
+        border-color: rgba(0,0,0, .7)!important;
+        -webkit-box-shadow: 0 0 3px rgba(21,21,21, .3)!important;
+        -moz-box-shadow: 0 0 3px rgba(21,21,21, .3)!important;
+        box-shadow: 0 0 3px rgba(21,21,21, .3)!important;
+    }
+
+    .submit-contact {
+        margin-top: 20px;
+        background: #fff;
+        color: #212121;
+        border: 1px solid #212121;
+        font-size: 13px;
+        font-family: 'Open sans',sans-serif;
+        font-weight: 400;
+        border-radius:0px;
+        padding: 10px 25px;
+        float: right;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+
+        &:hover {
+            color: #fff;
+            background: #212121;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    #contact_form .success{display:none;}
+    #contact_form .error{display:none;}
+
+    /***GOOGLE MAPS****/
+
+
+    #map_container {
+        width: 100%;
+        margin-top:0px;	
+        position: relative;
+
+        .cover-map {
+            background: rgba(0,0,0,0.9);
+            height: 100%;
+            width: 100%;
+            position: absolute;	
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            padding: 0 !important;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+
+            img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: -moz-transform .5s ease-out; 
+                transition: transform .5s ease-out;
+            }
+
+            &.map-active{
+                height: 50px;
+
+                .mm-close {
+                    display: flex;
+                }
+
+                .mm-open {
+                    display: none;
+                }
+            }
+
+            .mm-open, .mm-close {
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 1px;
+                font-size: 12px;
+                font-family: 'Open sans',sans-serif;
+                color: #fff;
+                font-weight: 300;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                i{
+                    margin-left: 10px;
+                }
+            }
+            
+            .mm-close {
+                display: none;
+            }
+        }
+    }
+}

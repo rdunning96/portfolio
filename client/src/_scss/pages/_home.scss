@@ -1,0 +1,67 @@
+
+app-home {  
+
+    .container {
+        padding: 50px 0;
+
+        @include media-breakpoint-up(lg) { 
+            padding: 100px 0;
+        }
+    }
+
+    .col-md-4 {
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(lg) { 
+            width: 33.33333%;
+            margin-bottom: 0px;
+        }
+    }
+
+    .box-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .image-box {
+            background-image: url('../../assets/images/office.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .home-parallax {
+        background:url('../../assets/images/architecture.jpg') no-repeat center center fixed;    
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        position: relative;
+        
+        .overlay {
+            background:url('../../assets/images/bg_p.png') repeat top left;    
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-box-left {
+            background-image: url('../../assets/images/object.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-box-right {
+            background-image: url('../../assets/images/object1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

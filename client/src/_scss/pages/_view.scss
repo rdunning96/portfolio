@@ -1,0 +1,33 @@
+
+app-view {
+
+    .container {
+        padding: 50px 0;
+
+        @include media-breakpoint-up(lg) { 
+            padding: 100px 0;
+        }
+    }
+
+    
+    .section-description{
+        
+        .box-content {
+            display: flex;
+            flex-wrap: wrap;
+    
+            .col-md-4 {
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                margin-bottom: 20px;
+        
+                @include media-breakpoint-up(lg) { 
+                    width: 33.33333%;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+}

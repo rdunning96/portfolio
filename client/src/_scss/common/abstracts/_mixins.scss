@@ -1,0 +1,71 @@
+
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+$image-path: '/assets/images/'; /*/s2t/portal/UI*/
+
+@mixin bg-icon($img: null, $position: center, $size: contain, $extension: 'svg') {
+    @if $img {
+      background-image: url($image-path + $img + '.' + $extension);
+    }
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $include-itself: true, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+  
+    @if not($include-itself) {
+      $min: $min + 1px;
+    }
+  
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+  // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+  // Makes the @content apply to the given breakpoint and narrower.
+  @mixin media-breakpoint-down($name, $include-itself: false, $breakpoints: $grid-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $include-itself {
+      $max: breakpoint-min($name, $breakpoints);
+    }
+    @if $max {
+      @media (max-width: $max) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+  // Media that spans multiple breakpoint widths.
+  // Makes the @content apply between the min and max breakpoints
+  @mixin media-breakpoint-between($lower, $upper, $include-itself: true, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($lower, $breakpoints);
+    $max: breakpoint-max($upper, $breakpoints);
+  
+    @if not($include-itself) {
+      $min: $min + 1px;
+    }
+    @if $min != null and $max != null {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    } @else if $max == null {
+      @include media-breakpoint-up($lower, $breakpoints) {
+        @content;
+      }
+    } @else if $min == null {
+      @include media-breakpoint-down($upper, $breakpoints) {
+        @content;
+      }
+    }
+  }

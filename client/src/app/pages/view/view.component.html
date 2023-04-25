@@ -1,0 +1,75 @@
+<section id="details">
+    <div class="container">
+        <div class="row">
+            <owl-carousel-o [options]="customOptionsSlider">
+                <ng-container *ngFor="let card of sliders; let i = index">
+                    <ng-template carouselSlide>
+                        <div class="item">
+                            <img src="{{card.src}}" alt="" />
+                         </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+       </div>
+    </div>
+</section>
+
+<section class="section-description">
+<div class="container">
+        <div class="row">
+            <h1> DESCRIPTION </h1>
+           <div class="box-content">
+              
+              <div class="col-md-4">
+                  <div class="box-text">
+                      <h2>CASE STUDY</h2>
+                      <p>miniMe restore client-focused potentialities rather than functional strategic theme areas. 
+                          Proin fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend, lorem fermentum orci sit amet, iaculis libero.</p>
+                          <p>miniMe restore client-focused potentialities rather than functional strategic theme areas.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box-text">
+                      <h2>RESULT</h2>
+                      <p>miniMe restore client-focused potentialities rather than functional strategic theme areas. 
+                          Proin fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend, lorem fermentum orci sit amet, iaculis libero.</p>
+                          <p>miniMe restore client-focused potentialities rather than functional strategic theme areas.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box-text">
+                      <h2>Project data</h2>
+                      <p>Date: 05/11/2014</p>
+                      <p>Phone: +12-345-6789</p>
+                      <p>E-mail: info@minime.com</p>
+                      <h2>PROJECT DETAILS</h2>
+                      <p>Academy of Art University</p>
+                      <p>Client: Envato Users</p>
+                      <p>Web Design School</p>
+                  </div>
+               </div>
+           </div><!--close box content-->
+      </div><!--close row-->
+    </div>
+</section>
+<hr />
+<section id="blog-carousel" class="cd-section">
+    <div class="container">
+        <div class="row">
+            <div class="box-content box-carousel">
+               <h1> RELATED PROJECTS </h1>
+               <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let card of items; let i = index">
+                    <ng-template carouselSlide>
+                        <div class="item">
+                            <img src="{{card.src}}" alt="" />
+                            <p class="details-title">{{card.author}}</p>
+                            <p class="details-desc">{{card.button}}</p>
+                         </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+            </div>
+        </div><!--close row-->
+    </div><!--close container-->
+</section>
